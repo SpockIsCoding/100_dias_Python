@@ -116,8 +116,7 @@ out: <class 'float'>
 ```python
 #1 ano possui 52 semanas
 age = input("Digite sua idade :")
-# 🚨 Don't change the code above 👆
-# Write your code below this line 👇
+
 life_expect = ((90 - int(age)) * 52) #converto a string age em int
 print(f"You have {life_expect} weeks left") #uso f-string para exibir o resultado,
 ```
