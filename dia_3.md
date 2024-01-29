@@ -46,7 +46,8 @@ else:
     print("Desculpe, você não pode seguir o caminho.")
 ```
 
-*Nested if/elif/else:** um elif dentro de um if, uma condição dentro de outra condição. se tiver + que 1.20cm, se for maior de 18 cobre r$12, se for menor que 12 cobre r$5, se for entre 12 e 18 cobre r$7. 
+**Nested if/elif/else:** um elif dentro de um if, uma condição dentro de outra condição. se tiver + que 1.20cm, se for maior de 18 cobre r$12, se for menor que 12 cobre r$5, se for entre 12 e 18 cobre r$7. 
+Posso usar vários elif dentro de um if. 
 
 ![](20240128213632.png)
 
