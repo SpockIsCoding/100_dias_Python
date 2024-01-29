@@ -25,6 +25,8 @@ else:
     print("é um número ímpar.")
 ```
 
+#### If/Elif/Else
+
 > **Nested if/else:** um if dentro de outro if, uma condição dentro de outra condição. se tiver + que 1.20cm, se for maior de 18, faça isso, se não faça isso. 
 
 
