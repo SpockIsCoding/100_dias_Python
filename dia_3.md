@@ -138,3 +138,12 @@ elif imc < 35:
 else:
     print(f"Você está morrendo, seu IMC é {imc}")
 ```
+
+**Ano bissexto (leap year):** Um ano bissexto ocorre a cada quatro anos para corrigir a discrepância entre o ano solar e o ano calendário.
+> 
+> Assim é como você determina se um ano específico é um ano bissexto.
+- em cada ano que é divisível por 4 sem resto
+- exceto em cada ano que é uniformemente divisível por 100 sem resto
+- a menos que o ano também seja divisível por 400 sem resto
+
+![](20240128224221.png)
