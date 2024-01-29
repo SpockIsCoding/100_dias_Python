@@ -173,7 +173,7 @@ else:
 
 ![](20240129185843.png)
 
-``python
+```python
 #código bem extenso. Mas temos uma versão mais simplificada logo abaixo na outra bateria de  código 
 
 print("Bem-vindos à Montanha da Perdição")
@@ -208,6 +208,7 @@ if altura > 120:
 else:
     print("Você não tem tamanho para ir nesta aventura.")
 ```
+
 
 ```python
 #uma forma mais direta, objetiva e simplificada de executar a mesma aplicação. 
