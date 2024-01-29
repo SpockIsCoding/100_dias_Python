@@ -24,3 +24,6 @@ if numero % 2 == 0:
 else:
     print("é um número ímpar.")
 ```
+> **Nested if/else:** um if dentro de outro if, uma condição dentro de outra condição. se tiver + que 1.20cm, se for maior de 18, faça isso, se não faça isso. 
+
+![](20240128212139.png)
