@@ -38,7 +38,7 @@ altura = int(input("Qual a sua altura em Cm ?"))
 if altura >= 120:
     print("Você pode seguir o caminho.")
     idade = int(input("Qual a sua idade ?"))
-    if idade >= 18:
+    if idade >= 18: #este é "Nested" porque está dentro de uma condição. 
         print("Pagar R$10.")
     else:
         print("Pagar R$5.")
