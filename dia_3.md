@@ -164,3 +164,9 @@ if ano % 4 == 0:
 else:
     print("Não é um ano bissexto")
 ```
+
+#### If/Else, múltiplas condições
+
+>Na imagem a seguir temos if e elif (esquerda) onde se 1(uma) das condições for verdadeira já atinge o objetivo e para a execução do código. À direta temos Multiple if que vai checando se uma condição for verdadeira, e, se for, segue para verificar a próxima condição. 
+
+![](20240129185156.png)
