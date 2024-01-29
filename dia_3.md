@@ -111,3 +111,30 @@ elif 30 <= imc < 35:
 elif imc >= 35: 
 	print("Você está morrendo")
 ```
+
+**Obs:** o código será lido de cima para baixo, assim nosso código poderia ser conforme abaixo.
+
+```python
+#Entre com a altura ex. 1.74
+height = input("Digite sua altura :")
+#Entre com o peso em Kg ex. 87
+weight = input("Digite o seu peso :")
+
+#Equação
+heightf = float(height)
+weightf = int(weight)
+height2 = (heightf ** 2)
+
+imc = (weightf // height2)#Usando divisão dupla (//) tem um efeito similar ao do round, isso declara como interger a equação.
+print (imc)
+if imc < 18.5:
+    print(f"Você está magricelo, seu IMC é {imc}, alimente-se!")
+elif imc < 25:
+    print(f"Você está no shape, seu IMC é {imc}!")
+elif imc < 30:
+    print(f"Você está mei gordin, seu IMC é {imc}.")
+elif imc < 35:
+    print(f"Você está obeso, seu IMC é {imc}.")
+else:
+    print(f"Você está morrendo, seu IMC é {imc}")
+```
