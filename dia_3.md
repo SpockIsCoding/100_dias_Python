@@ -228,5 +228,6 @@ if altura > 120:
 	if fotos.lower() == "sim": 
 		ingresso += 3 
 	print(f"O total da sua conta ficou em R${ingresso}, Obrigado!") 
-else: print("Você não tem tamanho para embarcar nesta aventura.")
+else:
+	print("Você não tem tamanho para embarcar nesta aventura.")
 ```
