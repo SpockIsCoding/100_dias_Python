@@ -172,3 +172,60 @@ else:
 ![](20240129185156.png)
 
 ![](20240129185843.png)
+
+``python
+#código bem extenso. Mas temos uma versão mais simplificada logo abaixo na outra bateria de  código 
+
+print("Bem-vindos à Montanha da Perdição")
+altura = int(input("Digite sua altura em cm: "))
+
+if altura > 120:
+    idade = int(input("Digite a sua idade: "))
+    if idade < 12:
+        fotos = str(input("Deseja tirar uma foto da jornada (sim/não)? "))
+        ingresso1 = 5
+        if fotos.lower() == "sim":
+            ingresso1 += 3 #note que pra eu acrescentar eu preciso colocar junto o =
+            print(f"O total da sua conta ficou em R${ingresso1}, Obrigado!")
+        else:
+            print(f"O total da sua conta ficou em R${ingresso1}, Obrigado!")
+    elif idade > 18:
+        fotos2 = str(input("Deseja tirar uma foto da jornada (sim/não)? "))
+        ingresso2 = 12
+        if fotos2.lower() == "sim":
+            ingresso2 += 3 #note que pra eu acrescentar eu preciso colocar junto o =
+            print(f"O total da sua conta ficou em R${ingresso2}, Obrigado!")
+        else:
+            print(f"O total da sua conta ficou em R${ingresso2}, Obrigado!")
+    else:
+        fotos3 = str(input("Deseja tirar uma foto da jornada (sim/não)? "))
+        ingresso3 = 7
+        if fotos3.lower() == "sim":
+            ingresso3 += 3 #note que pra eu acrescentar eu preciso colocar junto o =
+            print(f"O total da sua conta ficou em R${ingresso3}, Obrigado!")
+        else:
+            print(f"O total da sua conta ficou em R${ingresso3}, Obrigado!")        
+else:
+    print("Você não tem tamanho para ir nesta aventura.")
+```
+
+```python
+#uma forma mais direta, objetiva e simplificada de executar a mesma aplicação. 
+
+print("Bem-vindos à Montanha da Perdição") 
+altura = int(input("Digite sua altura em cm: "))
+
+if altura > 120: 
+	idade = int(input("Digite a sua idade: ")) 
+	if idade < 12: 
+		ingresso = 5 
+	elif idade > 18: 
+		ingresso = 12 
+	else: 
+		ingresso = 7 
+	fotos = str(input("Deseja tirar uma foto da jornada (sim/não)? "))
+	if fotos.lower() == "sim": 
+		ingresso += 3 
+	print(f"O total da sua conta ficou em R${ingresso}, Obrigado!") 
+else: print("Você não tem tamanho para embarcar nesta aventura.")
+```
