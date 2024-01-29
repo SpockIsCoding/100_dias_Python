@@ -84,32 +84,30 @@ weight = input("Digite o seu peso :")
 heightf = float(height)
 weightf = int(weight)
 height2 = (heightf ** 2)
-bmi = round(weightf / height2) #A função round é para arredondar números em float,
-#e o número depois da vírgula é a quantidade de casas decimais que se deseja após o ponto flutuante.
-bmi = (weightf // height2)#Usando divisão dupla (//) tem um efeito similar ao do round, isso declara como interger a equação.
 
+imc = (weightf // height2)#Usando divisão dupla (//) tem um efeito similar ao do round, isso declara como interger a equação.
 
-if bmi < 18.5:
-    print("Você está magricelo, alimente-se!")
-elif bmi >= 18.5 and bmi < 25:
-    print("Você está no shape!")
-elif bmi >= 25 and bmi < 30:
-    print("Você está mei gordin.")
-elif bmi >=30 and bmi < 35:
-    print("Você está obeso.")
-elif bmi >= 35:
-    print("Você está morrendo")
+if imc < 18.5:
+    print(f"Você está magricelo, seu IMC é {imc}, alimente-se!")
+elif imc >= 18.5 and imc < 25:
+    print(f"Você está no shape, seu IMC é {imc}!")
+elif imc >= 25 and imc < 30:
+    print(f"Você está mei gordin, seu IMC é {imc}.")
+elif imc >=30 and imc < 35:
+    print(f"Você está obeso, seu IMC é {imc}.")
+elif imc >= 35:
+    print(f"Você está morrendo, seu IMC é {imc}")
 
 ### uma forma mais enxuta seria
 
-if bmi < 18.5: 
+if imc < 18.5: 
 	print("Você está abaixo do peso, alimente-se!") 
-elif 18.5 <= bmi < 25: 
+elif 18.5 <= imc < 25: 
 	print("Você está no shape!") 
-elif 25 <= bmi < 30: 
+elif 25 <= imc < 30: 
 	print("Você está mei gordin.") 
-elif 30 <= bmi < 35: 
+elif 30 <= imc < 35: 
 	print("Você está obeso.") 
-elif bmi >= 35: 
+elif imc >= 35: 
 	print("Você está morrendo")
 ```
