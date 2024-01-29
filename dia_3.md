@@ -24,6 +24,24 @@ if numero % 2 == 0:
 else:
     print("é um número ímpar.")
 ```
+
 > **Nested if/else:** um if dentro de outro if, uma condição dentro de outra condição. se tiver + que 1.20cm, se for maior de 18, faça isso, se não faça isso. 
 
+
 ![](20240128212139.png)
+
+```python
+print("Bem vindo ao caminho dos esquecidos!!!")
+print("Prepare-se para uma viagem inesquecível.")
+altura = int(input("Qual a sua altura em Cm ?"))
+
+if altura >= 120:
+    print("Você pode seguir o caminho.")
+    idade = int(input("Qual a sua idade ?"))
+    if idade >= 18:
+        print("Pagar R$10.")
+    else:
+        print("Pagar R$5.")
+else:
+    print("Desculpe, você não pode seguir o caminho.")
+```
