@@ -45,3 +45,26 @@ if altura >= 120:
 else:
     print("Desculpe, você não pode seguir o caminho.")
 ```
+
+*Nested if/elif/else:** um elif dentro de um if, uma condição dentro de outra condição. se tiver + que 1.20cm, se for maior de 18 cobre r$12, se for menor que 12 cobre r$5, se for entre 12 e 18 cobre r$7. 
+
+![](20240128213632.png)
+
+```python
+print("Bem vindo ao caminho dos esquecidos!!!")
+print("Prepare-se para uma viagem inesquecível.")
+altura = int(input("Qual a sua altura em Cm ?"))
+
+if altura >= 120:
+    print("Você pode seguir o caminho.")
+    idade = int(input("Qual a sua idade ?"))
+    if idade >= 18: #este é "Nested" porque está dentro de uma condição. 
+        print("Pagar R$12.")
+    elif idade <=12:
+        print("Pagar R$5.")
+    else:
+	    print("Pagar R$7.")
+else:
+    print("Desculpe, você não pode seguir o caminho.")
+
+```
