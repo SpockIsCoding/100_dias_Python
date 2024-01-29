@@ -139,7 +139,7 @@ else:
     print(f"Você está morrendo, seu IMC é {imc}")
 ```
 
-**Ano bissexto (leap year):** Um ano bissexto ocorre a cada quatro anos para corrigir a discrepância entre o ano solar e o ano calendário.
+**Ano bissexto (leap year):** Um ano bissexto ocorre a cada quatro anos para corrigir a discrepância entre o ano solar e o calendário anual.
 > 
 > Assim é como você determina se um ano específico é um ano bissexto.
 - em cada ano que é divisível por 4 sem resto
