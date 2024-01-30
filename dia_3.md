@@ -1,3 +1,218 @@
+#python #100dias #100days
+#cloud #coding
+#spockiscoding #developer
+
+Obs: em alguns códigos teremos um **out** para exemplificar como será a saída do código, apenas em casos que realmente for necessário para a fixação do conteúdo. 
+
+## Dia 1
+
+#### Troca (switch) de variáveis
+
+> Para a troca de variáveis é preciso criar um nova variável provisória que receberá o valor que será posteriormente utilizado. Isso pq uma variável irá sobrescrever a outra. 
+
+```python
+#Q: Troque A por B, B por A
+a=10
+b=20
+#Errado, quando A=B, o valor de A passa a não existir mais. Assim, Se B = A, os valores ficarão iguais.
+a=b
+b=a
+#Certo, C recebe o valor de A, A recebe o Valor de B, e B recebe o valor de A que foi guardado em C
+c=a
+a=b
+b=c
+
+print("A: "+a)
+print("B: "+b)
+```
+
+#### Espaçamento e quebra de linha
+
+> Para dar um espaçamento ou coloca o espaço na string antes do final das aspas ou coloca uma string vazia
+> Para quebra de linha basta colocar \n
+
+```python
+print("Jesus "+"te "+"ama\n")
+print("E"+" "+"Eu"+" "+"também")
+```
+
+#### Input e Len
+
+> Input é para entrada de dados, onde o sistema espera uma interação do usuário
+> Len é para contar quantos caracteres tem uma variável. Len exibe um valor inteiro. 
+
+```python
+#Há uma forma simples porém pode ficar com uma linha enorme. 
+print(len(input()))
+#Há uma forma mais complexa declarando todas as variáveis. 
+nome = input("digite seu nome :")
+valor = len(nome)
+print(valor)
+```
+
+
+## Dia 2
+
+#### Data Types
+
+> **String:** é uma variável do tipo texto que é declarada entre aspas ex. "Hello". É possível mostrar qual a posição de cada caractere usando uma lista
+
+```python
+#Iremos imprimir apenas o caractere na posição 1, lembrando que começa em 0
+print ("hello"[1])
+out: e
+
+#Concatenar string. Mesmo se o interger estiver dentro das aspas ele será manipulado como texto. 
+print ("amor"+"maior")
+out: amormaior
+print ("123"+"love")
+out: 123love
+print ("123"+"456")
+out: 123456
+```
+
+>**Interger:** é uma variável do tipo inteiro, um número. 
+
+```python
+#para declarar um interger basta digitar
+123
+
+#soma 
+print(1 + 3)
+out: 4
+
+#é comum usar o caractere de sublinhado (`_`) como um separador visual em números grandes para tornar mais fácil a leitura dos dígitos. O Interpretador ignora o sublinhado. 
+123_456_789
+```
+
+> **Float:** é uma variável para se trabalhar com ponto decimal. Pontos Flutuantes são usados para representar números reais. 
+
+```python
+3.456
+345.6
+```
+
+> **Boolean:** são usados para representar apenas dois estados True ou False
+
+```python
+True
+False
+```
+
+> **Len:** len conta quantos caracteres tem em uma string, a questão é que len retorna um valor interger. Quando se tenta concatenar um len com uma string o interpretador apresenta um erro. 
+
+```python
+#código que irá apresentar o erro, por que concatenou string com interger
+num_char = len(input("Qual é o seu nome ?"))
+print("Seu nome tem" + num_char + "caracteres")
+
+#para checar qual o tipo da variável
+num_char = len(input("Qual é o seu nome ?"))
+print(type(num_char))
+out: Qual é o seu nome ? lima
+<class 'int'>
+
+#para contornar, basta converter a variável.
+num_char = len(input("Qual é o seu nome ? "))
+new_num_char = str(num_char)
+print("Seu nome tem " + new_num_char + " caracteres")
+
+#outro exemplo, esse usa uma lista para pegar o primeiro e o segundo caractere que foi informado na string e converter para int. 
+two_digit_number = input()
+num1 = int(two_digit_number[0])
+num2 = int(two_digit_number[1])
+
+print(num1 + num2)
+```
+
+> **Operações Matemáticas:*** dividir, somar, subtrair, multiplicar, potencializar. 
+
+```python
+3 + 5
+7 - 4
+3 * 2
+6 / 3 #uma divisão resulta em um float
+2 ** 3 #potencia, exponencial
+
+#Não esquecer de seguir a ordem das operações, PEMDAS
+Parênteses = ()
+Exponentes = **
+Multiplicação = *
+Divisão = /
+Adição = +
+Subtração = -
+```
+
+> **IMC:** calculadora simples de IMC. IMC = peso / pela altura elevada ao quadrado
+
+```python
+#Entre com a altura ex. 1.74
+height = input("Digite sua altura :")
+#Entre com o peso em Kg ex. 87
+weight = input("Digite o seu peso :")
+
+#Equação
+heightf = float(height)
+weightf = int(weight)
+height2 = (heightf ** 2)
+bmi = round(weightf / height2) #A função round é para arredondar números em float,
+#e o número depois da vírgula é a quantidade de casas decimais que se deseja após o ponto flutuante.
+bmi = (weightf // height2)#Usando divisão dupla (//) tem um efeito similar ao do round, isso declara como interger a equação.
+print (f"Seu IMC é igual a : {bmi}") #Observe que incluímos o f antes da sintaxe do print, 
+#isso é para formatar uma string usando f-string, a variável fica entre chaves {}
+
+#caso queira saber qual o tipo da variável
+print(type(bmi))
+out: <class 'float'>
+```
+
+>**Expectativa de vida:** calcule quantas semanas nos resta se vivêssemos até os 90 anos.
+
+```python
+#1 ano possui 52 semanas
+age = input("Digite sua idade :")
+
+life_expect = ((90 - int(age)) * 52) #converto a string age em int
+print(f"You have {life_expect} weeks left") #uso f-string para exibir o resultado,
+```
+
+>**Gorjeta:** um calculador simples de gorjeta
+
+```python
+print("Seja bem-vindo ao Gorja calculator !!!")
+conta = input("Qual o valor da conta ?: ")
+gorjeta = input ("Quanto quer pagar de gorjeta 10,12,15% ?: ")
+pessoas = input ("Quantas pessoas irão dividir a conta ?: ")
+
+gorjeta_total = (float(gorjeta) / 100) #converte string em float  e divide por 100, para obter o percentual
+parcial_conta = (gorjeta_total * float(conta) + float(conta)) #converte string em float e multiplica o percentual da gorjeta
+#pelo total da conta para obter o valor da conta + o percentual
+total_conta_dividida = (parcial_conta / float(pessoas)) #Divide o total da conta + gorjeta pela quantidade de pessoas a mesa
+
+print(f"Cada pessoa deverá pagar R${total_conta_dividida} ")
+
+#observe que não utilizados round ou // para arredondar pois estaríamos arredondado para o menor valor
+
+#para arredondar para cima poderíamos usar o ceil
+resultado = dividendo / divisor 
+resultado_arredondado = ceil(resultado)
+
+#uma forma mais limpa de se fazer seria o input já convertido:
+
+print("Seja bem-vindo ao Gorja calculator !!!")
+conta = float(input("Qual o valor da conta ?: "))
+gorjeta = int(input ("Quanto quer pagar de gorjeta 10,12,15% ?: "))
+pessoas = int(input ("Quantas pessoas irão dividir a conta ?: "))
+
+gorjeta_total = gorjeta / 100 #obter o percentual
+parcial_conta = (gorjeta_total * conta + conta) #multiplica o percentual da gorjeta
+#pelo total da conta para obter o valor da conta + o percentual
+total_conta_dividida = parcial_conta / pessoas #Divide o total da conta + gorjeta pela quantidade de pessoas a mesa
+
+print(f"Cada pessoa deverá pagar R${total_conta_dividida} ")
+
+
+```
 ## Dia 3
 
 #### Odd or Even
@@ -5,6 +220,7 @@
 > **Odd or Even ?:** ímpar ou par ?. É uma continha simples onde verifica-se se um número pode ser dividido por 2 sem restar nada além de 0. Isto é, um número par (even). Se a conta resultar em algo diferente de 0 é um número ímpar (odd).
 > Para obtermos isso basta pegar o número e % 2, assim o Python já retorna com o valor 0 ou não. O módulo (%) é usado para obter-se o resto de uma divisão de um número por outro.  
 
+>**Ímpar ou Par?
 ```python
 #uma forma mais detalhada. 
 numero = int (input())
@@ -32,6 +248,7 @@ else:
 
 ![](20240128212139.png)
 
+>**Passei pelo Caminho dos Esquecidos**
 ```python
 print("Bem vindo ao caminho dos esquecidos!!!")
 print("Prepare-se para uma viagem inesquecível.")
@@ -47,6 +264,7 @@ if altura >= 120:
 else:
     print("Desculpe, você não pode seguir o caminho.")
 ```
+
 
 **Nested if/elif/else:** um elif dentro de um if, uma condição dentro de outra condição. se tiver + que 1.20cm, se for maior de 18 cobre r$12, se for menor que 12 cobre r$5, se for entre 12 e 18 cobre r$7. 
 Posso usar vários elif dentro de um if. 
@@ -112,7 +330,7 @@ elif imc >= 35:
 	print("Você está morrendo")
 ```
 
-**Obs:** o código será lido de cima para baixo, assim nosso código poderia ser conforme abaixo.
+>**Obs:** o código será lido de cima para baixo, assim nosso código poderia ser conforme abaixo.
 
 ```python
 #Entre com a altura ex. 1.74
@@ -139,7 +357,7 @@ else:
     print(f"Você está morrendo, seu IMC é {imc}")
 ```
 
-**Ano bissexto (leap year):** Um ano bissexto ocorre a cada quatro anos para corrigir a discrepância entre o ano solar e o calendário anual.
+> **Ano bissexto (leap year):** Um ano bissexto ocorre a cada quatro anos para corrigir a discrepância entre o ano solar e o calendário anual.
 > 
 > Assim é como você determina se um ano específico é um ano bissexto.
 - em cada ano que é divisível por 4 sem resto
@@ -147,7 +365,6 @@ else:
 - a menos que o ano também seja divisível por 400 sem resto
 
 ![](20240128224221.png)
-
 
 ```python
 print("Vamos verificar se o ano é bissexto.")
@@ -165,6 +382,8 @@ else:
     print("Não é um ano bissexto")
 ```
 
+
+
 #### If/Else, múltiplas condições
 
 >Na imagem a seguir temos if e elif (esquerda) onde se 1(uma) das condições for verdadeira já atinge o objetivo e para a execução do código. À direta temos Multiple if que vai checando se uma condição for verdadeira, e, se for, segue para verificar a próxima condição. 
@@ -173,6 +392,7 @@ else:
 
 ![](20240129185843.png)
 
+>**Montanha da perdição**
 ```python
 #código bem extenso. Mas temos uma versão mais simplificada logo abaixo na outra bateria de  código 
 
@@ -209,7 +429,6 @@ else:
     print("Você não tem tamanho para ir nesta aventura.")
 ```
 
-
 ```python
 #uma forma mais direta, objetiva e simplificada de executar a mesma aplicação. 
 
@@ -228,6 +447,33 @@ if altura > 120:
 	if fotos.lower() == "sim": 
 		ingresso += 3 
 	print(f"O total da sua conta ficou em R${ingresso}, Obrigado!") 
-else:
+else: 
 	print("Você não tem tamanho para embarcar nesta aventura.")
 ```
+
+> **Pizzaria**
+```python
+print("Sejam Bem vindos ao Galinha Morta Pizzaria")
+pizza = str(input("Qual o tamanho de sua pizza ? (P,M,G)"))
+conta = 0
+
+if pizza.lower() == "p":
+    conta = 15
+elif pizza.lower() == "m":
+    conta = 20
+elif pizza.lower() == "g":
+    conta = 25
+    
+peperoni = str(input("Deseja adicionar Peperoni ? (S/N)"))
+
+if peperoni.lower() == "s" and pizza.lower() == "p":
+    conta += 2
+else:
+    conta += 3
+    
+queijo = str(input("Deseja adicionar Queijo Extra Power ? (S/N)"))
+if queijo.lower() == "s":
+    conta += 1    
+print(f"O valor total é igual R${conta}, obrigado.")
+```
+
