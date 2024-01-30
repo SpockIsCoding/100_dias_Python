@@ -453,8 +453,8 @@ else:
 
 > **Pizzaria**
 ```python
-print("Sejam Bem vindos ao Galinha Morta Pizzaria")
-pizza = str(input("Qual o tamanho de sua pizza ? (P,M,G)"))
+print("Sejam Bem-vindos à Galinha Morta Pizzaria")
+pizza = str(input("Qual o tamanho de sua pizza? (P, M, G)"))
 conta = 0
 
 if pizza.lower() == "p":
@@ -463,17 +463,19 @@ elif pizza.lower() == "m":
     conta = 20
 elif pizza.lower() == "g":
     conta = 25
-    
-peperoni = str(input("Deseja adicionar Peperoni ? (S/N)"))
 
-if peperoni.lower() == "s" and pizza.lower() == "p":
-    conta += 2
-else:
-    conta += 3
-    
-queijo = str(input("Deseja adicionar Queijo Extra Power ? (S/N)"))
+peperoni = str(input("Deseja adicionar Peperoni? (S/N)"))
+
+if peperoni.lower() == "s":
+    if pizza.lower() == "p":
+        conta += 2
+    else:
+        conta += 3
+
+queijo = str(input("Deseja adicionar Queijo Extra Power? (S/N)"))
 if queijo.lower() == "s":
     conta += 1    
-print(f"O valor total é igual R${conta}, obrigado.")
+
+print(f"O valor total é igual a R${conta}, obrigado.")
 ```
 
