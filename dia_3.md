@@ -246,7 +246,7 @@ else:
 > **Nested if/else:** um if dentro de outro if, uma condição dentro de outra condição. se tiver + que 1.20cm, se for maior de 18, faça isso, se não faça isso. 
 
 
-![](20240128212139.png)
+![](img/20240128212139.png)
 
 >**Passei pelo Caminho dos Esquecidos**
 ```python
@@ -269,7 +269,7 @@ else:
 **Nested if/elif/else:** um elif dentro de um if, uma condição dentro de outra condição. se tiver + que 1.20cm, se for maior de 18 cobre r$12, se for menor que 12 cobre r$5, se for entre 12 e 18 cobre r$7. 
 Posso usar vários elif dentro de um if. 
 
-![](20240128213632.png)
+![](img/20240128213632.png)
 
 ```python
 print("Bem vindo ao caminho dos esquecidos!!!")
@@ -364,7 +364,7 @@ else:
 - exceto em cada ano que é uniformemente divisível por 100 sem resto
 - a menos que o ano também seja divisível por 400 sem resto
 
-![](20240128224221.png)
+![](img/20240128224221.png)
 
 ```python
 print("Vamos verificar se o ano é bissexto.")
@@ -388,9 +388,9 @@ else:
 
 >Na imagem a seguir temos if e elif (esquerda) onde se 1(uma) das condições for verdadeira já atinge o objetivo e para a execução do código. À direta temos Multiple if que vai checando se uma condição for verdadeira, e, se for, segue para verificar a próxima condição. 
 
-![](20240129185156.png)
+![](img/20240129185156.png)
 
-![](20240129185843.png)
+![](img/20240129185843.png)
 
 >**Montanha da perdição**
 ```python
